@@ -10,6 +10,31 @@
 
 
 /* ---- Base Rules ---- */
+/* add smooth scrolling to all the html elements */
+html {
+    scroll-behavior: smooth;
+}
+/* styling link button element */
+#toTopButton {
+border: 2px solid #02d437b6;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 17px;
+margin-left: 20px;
+color: #000;
+}
+/* styling <a> element to match the wanted design*/
+a {
+    color: inherit; 
+    background-color: transparent;
+}
+/* styling the button on haver state*/
+#toTopButton:hover {
+    background-color: #02d437b6;
+    color: white;
+}
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
