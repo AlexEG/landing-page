@@ -1,14 +1,19 @@
 //Navigation is built dynamically as an unordered list. Start with empty ul and dynamically build navigation using Append, appendChild, and innerHTML
 
-//let sections = document.querySelectorAll('section')
+let sections = document.querySelectorAll('section');
 
-// document.header.appendChild(element);
+// testing if I can get the value of data-nav [section's title]
 
-function test1() {
-  let element = document.createElement('div');
-  element.innerText = 'test';
+function navigation() {
+  let sections = document.querySelectorAll('section');
+  //stor value of navbar__list inside a var
 
-  const test = document.getElementById('navbar__list');
-  test.appendChild(element);
+  let navbarList = document.getElementById('navbar__list');
+
+  test2.innerHTML = sections;
+  //now let's index all sections inside ul element
 }
-test1();
+navigation();
+
+console.log(sections);
+//trying to save all
