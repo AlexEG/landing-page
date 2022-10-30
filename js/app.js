@@ -34,6 +34,12 @@ let sections = Array.from(document.getElementsByTagName('section'));
  * Start Helper Functions
  *
  */
+//make function to get the name + id of every section
+function sectionsList() {
+  array.forEach(element => {
+    //save date-nav into a var called sectionTitle
+  });
+}
 
 /**
  * End Helper Functions
