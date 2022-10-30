@@ -51,6 +51,7 @@ let test5 = document.getElementById('section2');
 // Get it's position in the viewport
 //console.log(position);
 */
+/*
 function viewport(test) {
   let position = test.getBoundingClientRect();
   return position >= 0;
@@ -59,16 +60,32 @@ function viewport(test) {
 function pos() {
   // I need to put this function inside a loop but how
 
-  sections.forEach(element => {
-    if (
-      element.getBoundingClientRect().top >= -390 &&
-      element.getBoundingClientRect().top <= 140
-    ) {
-      console.log('In the viewport!');
+  for (element of sections) {
+    if (viewport(element)) {
+      if (!element.classList.contains('your-active-class')) {
+        console.log('In the viewport!');
+      }
     } else {
       console.log('Not in the viewport... whomp whomp');
     }
-  });
+  }
 }
 
 pos();
+*/
+
+window.onscroll = function () {
+  document.querySelectorAll('section').forEach(function (active) {
+    let activeLink = navbarList.querySelector(`[data-nav=${active.id}]`);
+    if (
+      active.getBoundingClientRect().top >= -385 &&
+      active.getBoundingClientRect().top <= 130
+    ) {
+      activeLink.classList.add('active-link');
+      active.classList.add('your-active-class');
+    } else {
+      activeLink.classList.remove('active-link');
+      active.classList.remove('your-active-class');
+    }
+  });
+};
