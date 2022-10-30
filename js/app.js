@@ -14,11 +14,20 @@ function navigationMenu() {
     //I had to ECMAScript here (I get some help from stackoverflow.com in ECMAScript)
     createLi.innerHTML = `<li><a href='#${element.id}' data-nav='${element.id}' class='menu__link'>${element.id}</a></li>`;
 
-    //I used appendchild to render the elements
+    //use appendchild to render the elements [done]
     navbarList.appendChild(createLi);
   });
 }
 
 navigationMenu();
 
-//console.log(sections);
+//Section Active State
+// Detect the element location relative to the viewport using .getBoundingClientRect() built-in function.
+
+//strart with stor the avtive class in a var
+//----testing------//
+let active = document.getElementsByClassName('your-active-class');
+
+window.addEventListener('scroll', function {
+
+})
