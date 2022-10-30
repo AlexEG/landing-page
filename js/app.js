@@ -31,7 +31,7 @@ navigationMenu();
 
 /*
 what we need to to 
-1.we  need to know if the section is in the viewport or not.
+1.we  need to know if the section is in the viewport or not. [done]
 2.and than we need to give this section the [ your-active-class ] 
 so the css go to that section and give ti the color and stuff .
 3. we need to remove the [ your-active-class ] the rest of sections that are not in the viewport.
@@ -45,13 +45,20 @@ right:1565  top:465  width:1549  x:16  y:465
 bottom:1497.375  height:663.1875  left:16
 right:1073  top: 834.1875  width: 1057  x:16  y:834.1875
 */
-
+/*
 let test5 = document.getElementById('section2');
 
 // Get it's position in the viewport
-let position = test5.getBoundingClientRect();
+//console.log(position);
+*/
+function viewport(test) {
+  let position = test.getBoundingClientRect();
+  return position >= 0;
+}
 
 function pos() {
+  // I need to put this function inside a loop but how
+
   sections.forEach(element => {
     if (
       element.getBoundingClientRect().top >= -390 &&
@@ -63,6 +70,5 @@ function pos() {
     }
   });
 }
-pos();
 
-//console.log(position);
+pos();
