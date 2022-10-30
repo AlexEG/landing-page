@@ -28,6 +28,6 @@ navigationMenu();
 //----testing------//
 let active = document.getElementsByClassName('your-active-class');
 
-window.addEventListener('scroll', function {
-
-})
+window.addEventListener('scroll', function () {
+  console.log('test');
+});
