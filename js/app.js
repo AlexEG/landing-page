@@ -33,8 +33,8 @@ navigationMenu();
 what we need to to 
 1.we  need to know if the section is in the viewport or not. [done]
 2.and than we need to give this section the [ your-active-class ] 
-so the css go to that section and give ti the color and stuff .
-3. we need to remove the [ your-active-class ] the rest of sections that are not in the viewport.
+so the css go to that section and give ti the color and stuff [done]
+3. we need to remove the [ your-active-class ] the rest of sections that are not in the viewport[done]
 */
 
 /* position of section1
@@ -76,16 +76,27 @@ pos();
 
 window.onscroll = function () {
   document.querySelectorAll('section').forEach(function (active) {
-    let activeLink = navbarList.querySelector(`[data-nav=${active.id}]`);
+    let position = navbarList.querySelector(`[data-nav=${active.id}]`);
     if (
+      //if any element apper in this position then
       active.getBoundingClientRect().top >= -385 &&
       active.getBoundingClientRect().top <= 130
     ) {
-      activeLink.classList.add('active-link');
+      // get it ('your-active-class') class
+      position.classList.add('active-position');
       active.classList.add('your-active-class');
     } else {
-      activeLink.classList.remove('active-link');
+      // but if the section is not in the viewport than remove('your-active-class')
+      position.classList.remove('active-position');
       active.classList.remove('your-active-class');
     }
   });
 };
+
+//--- addEventListener('click',....) to listen to the click event--
+
+navbarList.addEventListener('click');
+{
+  getElementById(`${target.dataset.nav}`);
+  scrollIntoView({ behavior: 'smooth' });
+}

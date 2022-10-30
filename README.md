@@ -33,9 +33,9 @@ PROJECT SPECIFICATION
 ## Scroll to Anchor
 ###When clicking an item from the navigation menu, the link should scroll to the appropriate section.
 You can use the following methods to fulfill this criterion: 
-1. Use addEventListener('click',....) to listen to the click event [ <font color='red'> <b>Running </b></font>]
+1. Use addEventListener('click',....) to listen to the click event [ <font color='green'> <b>DONE </b></font>] 
 2. Use preventDefault() as if there is a default event occurring we need to stop that.
-3. There are several javascript methods for scrolling, scroll(), scrollBy(), and scrollIntoView() are all acceptable.
+3. There are several javascript methods for scrolling, scroll(), scrollBy(), and scrollIntoView() are all acceptable [ <font color='green'> <b>DONE </b></font>] 
 4. A smooth scrolling behavior is expected in the project.
 
 
