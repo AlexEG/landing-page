@@ -28,21 +28,33 @@ let navbar = document.getElementById('navbar__list');
 //save all sections to a variable / data structure
 // I'll use array from method
 let sections = Array.from(document.getElementsByTagName('section'));
-
+let sectionLength = sections.length;
 /**
  * End Global Variables
  * Start Helper Functions
  *
  */
-//make function to get the name + id of every section
-function sectionsList() {
-  array.forEach(element => {
-    //save date-nav into a var called sectionTitle
-    let dataNav = document.getElementsByClassName('data-nav');
-    // stor date-nav value[the name of section] into var
-    let sectionTitle = dataNav.value;
+//just tring another thing
+function sectionsList(){
+  forEach(section) {
+    let sectionName= section.getAttribute('data-nav');
+     let sectionid = section.
   });
 }
+
+// //make function to get the name + id of every section
+// function sectionsList() {
+//   array.forEach(element => {
+//     //save date-nav into a var called sectionTitle
+//     const dataNav = document.getElementsByClassName('data-nav');
+//     // stor date-nav value[the name of section] into var
+//     const sectionTitle = dataNav.value;
+//     // get the id of each section
+
+    
+
+//   });
+// }
 
 /**
  * End Helper Functions
