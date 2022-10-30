@@ -45,6 +45,7 @@ right:1565  top:465  width:1549  x:16  y:465
 bottom:1497.375  height:663.1875  left:16
 right:1073  top: 834.1875  width: 1057  x:16  y:834.1875
 */
+
 let test5 = document.getElementById('section2');
 
 // Get it's position in the viewport
@@ -53,12 +54,8 @@ let position = test5.getBoundingClientRect();
 function pos() {
   sections.forEach(element => {
     if (
-      element.top >= 1134.1875 &&
-      element.left >= 1797.375 &&
-      element.right <=
-        (window.innerWidth || document.documentElement.clientWidth) &&
-      element.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight)
+      element.getBoundingClientRect().top >= -390 &&
+      element.getBoundingClientRect().top <= 140
     ) {
       console.log('In the viewport!');
     } else {
@@ -68,4 +65,4 @@ function pos() {
 }
 pos();
 
-console.log(position);
+//console.log(position);
