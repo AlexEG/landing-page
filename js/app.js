@@ -10,12 +10,15 @@ function navigationMenu() {
   sections.forEach(element => {
     //create an unorder list for each element in this structure [done]
     createLi = document.createElement('li');
-    //make a html element with
-    createLi.innerText = 'hi'; //testing
+    //make a html element with javascript
+    //I had to ECMAScript here (I get some help from stackoverflow.com in ECMAScript)
+    createLi.innerHTML = `<li><a href='#${element.id}' data-nav='${element.id}' class='menu__link'>'test'</a></li>`; //testing
+
+    //I used appendchild to render the elements
     navbarList.appendChild(createLi);
   });
 }
 
 navigationMenu();
 
-console.log(sections);
+//console.log(sections);
