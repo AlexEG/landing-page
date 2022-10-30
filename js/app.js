@@ -38,6 +38,9 @@ let sections = Array.from(document.getElementsByTagName('section'));
 function sectionsList() {
   array.forEach(element => {
     //save date-nav into a var called sectionTitle
+    let dataNav = document.getElementsByClassName('data-nav');
+    // stor date-nav value[the name of section] into var
+    let sectionTitle = dataNav.value;
   });
 }
 
