@@ -24,23 +24,27 @@
  */
 
 // save ul element to a variable so I can make an unordered list
-let navbar = document.getElementById('navbar__list');
+let menuNavbar = document.getElementById('navbar__list');
 //save all sections to a variable / data structure
 // I'll use array from method
-let sections = Array.from(document.getElementsByTagName('section'));
+let sections = Array.from(document.querySelectorAll('section'));
 let sectionLength = sections.length;
 /**
  * End Global Variables
  * Start Helper Functions
  *
  */
-//just tring another thing
-function sectionsList(){
-  forEach(section) {
-    let sectionName= section.getAttribute('data-nav');
-     let sectionid = section.
-  });
-}
+
+// function sectionsList() {
+//   for (section of sections) {
+//     sectionName = section.getAttribute('data-nav');
+//     sectionId = section.getAttribute('id');
+//     listItem = document.sectionsList('li');
+//     listItem.innerHTML = `<a class='menu__link' href='#${sectionId}'>${sectionName}</a>`;
+
+//     menuNavbar.appendChild(listItem);
+//   }
+// }
 
 // //make function to get the name + id of every section
 // function sectionsList() {
@@ -51,31 +55,19 @@ function sectionsList(){
 //     const sectionTitle = dataNav.value;
 //     // get the id of each section
 
-    
-
 //   });
 // }
 
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
+// Scroll to section on link click by using sectionID
+const smoothScrolling = () => {
+  const links = document.querySelectorAll('.navbar__menu a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      for (i = 0; i < sections; i++) {
+        sections[i].addEventListener('click', sectionScroll(link));
+      }
+    });
+  });
+};
 
-// build the nav
-
-// Add class 'active' to section when near top of viewport
-
-// Scroll to anchor ID using scrollTO event
-
-/**
- * End Main Functions
- * Begin Events
- *
- */
-
-// Build menu
-
-// Scroll to section on link click
-
-// Set sections as active
+smoothScrolling();
