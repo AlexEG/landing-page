@@ -33,73 +33,39 @@ navigationMenu();
 what we need to to 
 1.we  need to know if the section is in the viewport or not.
 2.and than we need to give this section the [ your-active-class ] 
- so the css go to that section and give ti the color and stuff .
+so the css go to that section and give ti the color and stuff .
 3. we need to remove the [ your-active-class ] the rest of sections that are not in the viewport.
 */
-
-let test5 = document.getElementById('section1');
-
-// Get it's position in the viewport
-let position = test5.getBoundingClientRect();
-
-// Log the results
-console.log(position);
 
 /* position of section1
 bottom:1128.1875  height:663.1875  left:16
 right:1565  top:465  width:1549  x:16  y:465
+
+
+bottom:1497.375  height:663.1875  left:16
+right:1073  top: 834.1875  width: 1057  x:16  y:834.1875
 */
+let test5 = document.getElementById('section2');
 
-// const div = document.createElement('div');
-// div.className = 'foo';
+// Get it's position in the viewport
+let position = test5.getBoundingClientRect();
 
-// // our starting state: <div class="foo"></div>
-// console.log(div.outerHTML);
+function pos() {
+  sections.forEach(element => {
+    if (
+      element.top >= 1134.1875 &&
+      element.left >= 1797.375 &&
+      element.right <=
+        (window.innerWidth || document.documentElement.clientWidth) &&
+      element.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight)
+    ) {
+      console.log('In the viewport!');
+    } else {
+      console.log('Not in the viewport... whomp whomp');
+    }
+  });
+}
+pos();
 
-// // use the classList API to remove and add classes
-// div.classList.remove('foo');
-// div.classList.add('anotherclass');
-
-// // <div class="anotherclass"></div>
-// console.log(div.outerHTML);
-
-// // if visible is set remove it, otherwise add it
-// div.classList.toggle('visible');
-
-// // add/remove visible, depending on test conditional, i less than 10
-// div.classList.toggle('visible', i < 10);
-
-// console.log(div.classList.contains('foo'));
-
-// // add or remove multiple classes
-// div.classList.add('foo', 'bar', 'baz');
-// div.classList.remove('foo', 'bar', 'baz');
-
-// // add or remove multiple classes using spread syntax
-// const cls = ['foo', 'bar'];
-// div.classList.add(...cls);
-// div.classList.remove(...cls);
-
-// // replace class "foo" with class "bar"
-// div.classList.replace('foo', 'bar');
-
-// //--------------------------------------------------//
-// let active = document.getElementsByClassName('your-active-class');
-
-// function update() {
-//   const container = document.getElementById('controls');
-//   const elem = document.getElementById('example');
-//   const rect = elem.getBoundingClientRect();
-
-//   container.innerHTML = '';
-//   for (const key in rect) {
-//     if (typeof rect[key] !== 'function') {
-//       let para = document.createElement('p');
-//       para.textContent = `${key} : ${rect[key]}`;
-//       container.appendChild(para);
-//     }
-//   }
-// }
-
-// document.addEventListener('scroll', update);
-// update();
+console.log(position);
