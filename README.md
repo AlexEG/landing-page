@@ -26,14 +26,14 @@ PROJECT SPECIFICATION
 
 ## Section Active State
 
-1. It should be clear which section is being viewed while scrolling through the page [ <font color='red'> <b>Running </b></font>]
+1. It should be clear which section is being viewed while scrolling through the page [ <font color='green'> <b>DONE </b></font>] 
 
-2. Tip: Detect the element location relative to the viewport using .getBoundingClientRect() built-in function.
+2. Tip: Detect the element location relative to the viewport using .getBoundingClientRect() built-in function [ <font color='green'> <b>DONE </b></font>] 
 
 ## Scroll to Anchor
 ###When clicking an item from the navigation menu, the link should scroll to the appropriate section.
-You can use the following methods to fulfill this criterion:
-1. Use addEventListener('click',....) to listen to the click event.
+You can use the following methods to fulfill this criterion: 
+1. Use addEventListener('click',....) to listen to the click event [ <font color='red'> <b>Running </b></font>]
 2. Use preventDefault() as if there is a default event occurring we need to stop that.
 3. There are several javascript methods for scrolling, scroll(), scrollBy(), and scrollIntoView() are all acceptable.
 4. A smooth scrolling behavior is expected in the project.
