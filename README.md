@@ -22,11 +22,11 @@ PROJECT SPECIFICATION
 # Landing Page Behavior
 
 ## Navigation
-1. Navigation is built dynamically as an unordered list. Start with empty ul and dynamically build navigation using Append, appendChild, and innerHTML [ <font color='red'> <b>Running </b></font>]
+1. Navigation is built dynamically as an unordered list. Start with empty ul and dynamically build navigation using Append, appendChild, and innerHTML [ <font color='green'> <b>DONE </b></font>] 
 
 ## Section Active State
 
-1. It should be clear which section is being viewed while scrolling through the page.
+1. It should be clear which section is being viewed while scrolling through the page [ <font color='red'> <b>Running </b></font>]
 
 2. Tip: Detect the element location relative to the viewport using .getBoundingClientRect() built-in function.
 
