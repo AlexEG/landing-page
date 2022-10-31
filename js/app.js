@@ -94,9 +94,3 @@ window.onscroll = function () {
 };
 
 //--- addEventListener('click',....) to listen to the click event--
-
-navbarList.addEventListener('click');
-{
-  getElementById(`${target.dataset.nav}`);
-  scrollIntoView({ behavior: 'smooth' });
-}
