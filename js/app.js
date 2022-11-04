@@ -94,3 +94,21 @@ window.onscroll = function () {
 };
 
 //--- addEventListener('click',....) to listen to the click event--
+
+navbarList.addEventListener('click', event => {
+  event.preventDefault();
+  if (event.target.dataset.nav) {
+    document
+      .getElementById(`${event.target.dataset.nav}`)
+      .scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      location.hash = `${event.target.dataset.nav}`;
+    }, 280);
+  }
+});
+
+const TopButton = document.getElementById('toTopButton');
+
+TopButton.addEventListener('click', () => {
+  document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+});
