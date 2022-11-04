@@ -106,9 +106,3 @@ navbarList.addEventListener('click', event => {
     }, 280);
   }
 });
-
-const TopButton = document.getElementById('toTopButton');
-
-TopButton.addEventListener('click', () => {
-  document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
-});
